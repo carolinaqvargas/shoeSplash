@@ -132,17 +132,45 @@ span{
     display: flex;
     align-items: baseline;
     justify-content: space-around;
+
 }
 
 .escarpinBox:hover{
-    opacity: .5;
+/*    opacity: .5;*/
     transition: all ease 2s;
 }
  
-.escarpin:hover{
-    opacity: 1;
-    background-color: #EB35BE;
+.escarpin {
+/*    opacity: 0.5;*/
     transition: all ease 2s;
+    animation: myAnim 500ms linear forwards;
+}
+
+@keyframes myAnim {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.5;
+    }
+}
+
+
+@keyframes myAnimReverse {
+    0% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.escarpin:hover{
+/* opacity: 1;*/
+    animation: myAnimReverse 500ms linear forwards;
 }
 
 .escarpin > img{ 
